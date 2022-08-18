@@ -492,14 +492,14 @@ let mix4= superMarket.filter(function(item){
     return item.type==="dairy" || item.type==="vegetable"
 })
 
-.map((item)=>{    
-    return {
-        ...item,
-       
-        isAvailable: true,
-    };
-});
-    
+ .map((item) => {
+          return {
+            ...item,
+            isAvailable : item.type.includes("dairy"),
+        
+          };
+        });
+
 
 console.log(mix4);
     </script>
